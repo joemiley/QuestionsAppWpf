@@ -1,0 +1,26 @@
+﻿<Window x:Class="QuestionsApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuestionsApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="Panel" Grid.Row="1" Grid.ColumnSpan="3" Background="White"/>
+        <Viewbox Stretch="Uniform" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3">
+            <TextBlock   x:Name="LabelQuestion"     FontSize="12"   Text="Q's"  Margin="2,0,2,0" Background="Transparent" TextAlignment="Center"/>
+        </Viewbox>
+        <Button x:Name="ButtonStart" Grid.Column="0" Grid.Row="3" Content="Start" FontSize="36" Click="ButtonStart_Click"/>
+        <Button x:Name="ButtonStop" Grid.Column="1" Grid.Row="3" Content="stop" FontSize="36" Click="ButtonStop_Click"/>
+    </Grid>
+</Window>
